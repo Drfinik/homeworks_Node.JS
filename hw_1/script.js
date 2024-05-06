@@ -6,7 +6,6 @@
 
 
 const http = require('http');
-const fs = require('fs');
 
 let homePageViews = 0;
 let aboutPageViews = 0;

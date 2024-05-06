@@ -1,0 +1,24 @@
+{
+  "name": "secure-password-generator-Drfinik",
+  "version": "1.0.0",
+  "description": "Библиотека для генерации безопасных случайных паролей",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drfinik"
+  },
+  "keywords": [
+    "password",
+    "security",
+    "generator"
+  ],
+  "author": "Ваше Имя <ваш_email@example.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/Drfinik",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}
