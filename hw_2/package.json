@@ -1,5 +1,5 @@
 {
-  "name": "secure-password-generator-Drfinik",
+  "name": "secure-password-generator-drfinik",
   "version": "1.0.0",
   "description": "Библиотека для генерации безопасных случайных паролей",
   "main": "index.js",
