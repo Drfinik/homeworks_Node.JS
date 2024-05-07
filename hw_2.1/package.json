@@ -1,0 +1,12 @@
+{
+  "name": "solve-quadratic-drfinik",
+  "version": "1.0.1",
+  "description": "функция для решения квадратных уравнений",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "keywords": [],
+  "author": "Drfinik",
+  "license": "ISC"
+}
