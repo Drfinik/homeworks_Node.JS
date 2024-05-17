@@ -1,24 +1,19 @@
-const crypto = require('crypto');
+function generatePassword(length, hasNumbers, hasSpecialChars) {
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const numbers = '0123456789';
+  const specialChars = '!@#$%^&*()_+{}:"<>?[];,./\'';
+  
+  let characters = alphabet;
+  if (hasNumbers) characters += numbers;
+  if (hasSpecialChars) characters += specialChars;
 
-class PasswordGenerator {
-  constructor() {
-    this.lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    this.uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    this.numbers = '0123456789';
-    this.symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+  let password = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
   }
 
-  generate(length = 8, options = { hasNumbers: true, hasSymbols: true, hasLowercase: true, hasUppercase: true }) {
-    let characters = '';
-    if (options.hasLowercase) characters += this.lowercase;
-    if (options.hasUppercase) characters += this.uppercase;
-    if (options.hasNumbers) characters += this.numbers;
-    if (options.hasSymbols) characters += this.symbols;
-
-    return Array.from(crypto.randomFillSync(new Uint8Array(length)))
-      .map((x) => characters[x % characters.length])
-      .join('');
-  }
+  return password;
 }
 
-module.exports = PasswordGenerator;
+module.exports = {generatePassword};

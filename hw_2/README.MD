@@ -10,10 +10,8 @@ npm install secure-password-generator-Drfinik
 
 ## Пример использования
 
-const PasswordGenerator = require('./PasswordGenerator');
+const PasswordGenerator = require('secure-password-generator-drfinik');
 
-const generator = new PasswordGenerator();
-
-const password = generator.generate(12, { hasSymbols: false });
+const password = PasswordGenerator.generatePassword(12, true, true);
 
 console.log(password);
